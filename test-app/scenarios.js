@@ -5,6 +5,8 @@ Scenarios.fromDir(__dirname)
   .expand({
     ember_3_25,
     lts_3_28,
+    lts_4_4,
+    lts_4_8,
     release,
     beta,
     canary,
@@ -42,6 +44,28 @@ async function lts_3_28(project) {
   });
   project.linkDevDependency('ember-source', {
     baseDir: __dirname,
+  });
+}
+
+async function lts_4_4(project) {
+  project.linkDevDependency('ember-cli', {
+    baseDir: __dirname,
+    resolveName: 'ember-cli-4.4',
+  });
+  project.linkDevDependency('ember-source', {
+    baseDir: __dirname,
+    resolveName: 'ember-source-4.4',
+  });
+}
+
+async function lts_4_8(project) {
+  project.linkDevDependency('ember-cli', {
+    baseDir: __dirname,
+    resolveName: 'ember-cli-4.8',
+  });
+  project.linkDevDependency('ember-source', {
+    baseDir: __dirname,
+    resolveName: 'ember-source-4.8',
   });
 }
 
