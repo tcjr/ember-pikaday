@@ -43,15 +43,15 @@
     "prepublishOnly": "rollup --config"
   },
   "dependencies": {
+    "@ember/test-helpers": "^2.6.0",
     "@embroider/addon-shim": "^0.50.2",
-    "ember-modifier": "^3.0.0 || ^4.0.0"
+    "ember-modifier": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/plugin-proposal-decorators": "^7.16.7",
     "@ember/optional-features": "^2.0.0",
-    "@ember/test-helpers": "^2.6.0",
     "@embroider/addon-dev": "^0.50.2",
     "@embroider/compat": "npm:@embroider/compat@latest",
     "@embroider/core": "npm:@embroider/core@latest",

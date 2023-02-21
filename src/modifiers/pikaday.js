@@ -46,8 +46,8 @@ export default class PikadayModifier extends Modifier {
       if (value) {
         this.#pikaday.setDate(value, true);
       }
-      this.syncDisabled();
-      this.#observer = new MutationObserver(this.syncDisabled.bind(this));
+      this.syncDisabled(element);
+      this.#observer = new MutationObserver(() => this.syncDisabled(element));
       this.#observer.observe(element, { attributes: true });
     } else {
       // Update
