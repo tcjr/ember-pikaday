@@ -1,13 +1,13 @@
-name: Push dist
+name: Push dist on PR
 
 on:
-  push:
+  pull_request:
     branches:
-      - experimental
+      - master
 
 jobs:
   push-dist:
-    name: Push dist
+    name: Push pr dist
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -16,3 +16,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           pack-command: yarn pack
+          branch: ${{ GITHUB_REF_NAME }}-dist
