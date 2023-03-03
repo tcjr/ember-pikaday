@@ -40,7 +40,8 @@
     "test:ember-compatibility": "cd test-app && qunit scenarios.js",
     "prepare": "npm-run-all prepublishOnly link-test-app",
     "link-test-app": "addon-dev link-test-app",
-    "prepublishOnly": "rollup --config"
+    "prepublishOnly": "rollup --config",
+    "prepack": "rollup --config"
   },
   "dependencies": {
     "@embroider/addon-shim": "^0.50.2",
