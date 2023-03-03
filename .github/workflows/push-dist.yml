@@ -16,4 +16,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           pack-command: yarn pack
-          branch: "${GITHUB_REF_NAME}-dist"
+          branch: "${GITHUB_REF##*/}-dist"
